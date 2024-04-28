@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TE AMO MI NIÑA</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 90vh;
+        /* Ajustado para permitir scroll */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        /* Cambiado de center a flex-start */
+        background: #0b1522;
+        padding-top: 100px;
+        /* Agregado para mover todo hacia abajo */
+    }
+
+    .heart {
+        height: 10vw;
+        width: 10vw;
+        max-height: 150px;
+        max-width: 150px;
+        background-color: #0057ff;
+        position: relative;
+        transform: rotate(45deg);
+        box-shadow: -20px 20px 150px #00a2ff;
+        animation: palpitar 0.5s linear infinite alternate;
+    }
+
+    .contenido {
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+    }
+
+    @keyframes palpitar {
+        0% {
+            transform: rotate(45deg) scale(1.10);
+        }
+
+        80% {
+            transform: rotate(45deg) scale(1.0);
+        }
+
+        100% {
+            transform: rotate(45deg) scale(0.8);
+        }
+    }
+
+    .heart::before,
+    .heart::after {
+        content: "";
+        position: absolute;
+        height: 10vw;
+        width: 10vw;
+        max-height: 150px;
+        max-width: 150px;
+        background: #0057ff;
+        border-radius: 50%;
+        box-shadow: 20px 20px 150px #0057ff;
+    }
+
+    .heart::before {
+        top: -50%;
+    }
+
+    .heart::after {
+        right: 50%;
+    }
+
+    .carta {
+        background-color: #ffffff;
+        color: #333;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        max-width: 90%;
+        word-wrap: break-word;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 4vw;
+        }
+
+        p {
+            font-size: 3.5vw;
+        }
+
+        .heart {
+            height: 25vw;
+            width: 25vw;
+        }
+
+        .heart::before,
+        .heart::after {
+            height: 25vw;
+            width: 25vw;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 5.5vw;
+        }
+
+        p {
+            font-size: 4.5vw;
+        }
+
+        .heart {
+            height: 30vw;
+            width: 30vw;
+        }
+
+        .heart::before,
+        .heart::after {
+            height: 30vw;
+            width: 30vw;
+        }
+    }
+</style>
+
+<body>
+    <div class="heart"></div>
+    <div class="contenido">
+        <h1>Te Amo, Hellen</h1>
+        <div class="carta">
+            <p>Mi Amor Hellen,</p>
+            <p>Celebrando estos maravillosos tres meses juntos, quiero decirte lo mucho que te amo y lo importante que
+                eres para mí. Cada momento a tu lado es un recuerdo precioso que atesoro profundamente. Eres mi todo, mi
+                alegría y mi motivo para sonreír cada día. Gracias por ser la luz en mi vida. Me haces el niño más feliz
+                del mundo. Eres la mejor novia del mundo y te mereces todo el mundo y lo tendrás. Me reviviste
+                literalmente, te amo más de lo que puedo expresar. Eres hermosamente bella, una verdadera diosa. No solo
+                eres la mejor novia, eres perfecta en todo lo que haces.</p>
+            <p>Con todo mi amor,</p>
+            <p>Kevin 💙</p>
+        </div>
+    </div>
+</body>
+
+</html>
